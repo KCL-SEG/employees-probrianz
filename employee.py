@@ -100,28 +100,21 @@ class HourlyEmployeeWithContractCommission(HourlyEmployee):
         total_pay_info = f"Their total pay is {self.get_pay()}."
         return f"{hourly_info} {commission_info} {total_pay_info}"
 
-# Billie works on a monthly salary of 4000.  Their total pay is 4000.
-billie = Employee('Billie')
-
-# Charlie works on a contract of 100 hours at 25/hour.  Their total pay is 2500.
-charlie = Employee('Charlie')
-
-# Renee works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract.  Their total pay is 3800.
-renee = Employee('Renee')
-
-# Jan works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract.  Their total pay is 4410.
-jan = Employee('Jan')
-
-# Robbie works on a monthly salary of 2000 and receives a bonus commission of 1500.  Their total pay is 3500.
-robbie = Employee('Robbie')
-
-# Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
-ariel = Employee('Ariel')
-
-# Examples of different employees
+# Billie works on a monthly salary of 4000. Their total pay is 4000.
 billie = SalaryEmployee('Billie', 4000)
+
+# Charlie works on a contract of 100 hours at 25/hour. Their total pay is 2500.
 charlie = HourlyEmployee('Charlie', 100, 25)
+
+# Renee works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract. Their total pay is 3800.
 renee = SalaryEmployeeWithContractCommission('Renee', 3000, 4, 200)
+
+# Jan works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract. Their total pay is 4410.
 jan = HourlyEmployeeWithContractCommission('Jan', 150, 25, 3, 220)
+
+# Robbie works on a monthly salary of 2000 and receives a bonus commission of 1500. Their total pay is 3500.
 robbie = SalaryEmployeeWithBonus('Robbie', 2000, 1500)
+
+# Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600. Their total pay is 4200.
 ariel = HourlyEmployeeWithBonus('Ariel', 120, 30, 600)
+
